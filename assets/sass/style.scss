@@ -1,0 +1,231 @@
+  /*===== GOOGLE FONTS =====*/
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+  /*===== VARIABLES CSS =====*/
+  :root{
+    --header-height: 3rem;
+
+    /*===== Colors =====*/
+    --first-color: #FFFFF;
+    --first-color-dark: #8b95eb;
+    --first-color-darken: #5d6db1;
+    --white-color: #001;
+    --first-color-menu: rgb(100, 100, 114);
+    
+    /*===== Font and typography =====*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2.5rem;
+    --normal-font-size: .938rem;
+    
+    /*===== z index =====*/
+    --z-fixed: 100;
+  }
+
+  @media screen and (min-width: 768px){
+    :root{
+      --big-font-size: 5rem;
+      --normal-font-size: 1rem;
+    }
+  }
+
+  /*===== BASE =====*/
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+  }
+  *,::before,::after{
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #fff;
+  }
+
+  h1,p,ul{
+    margin: 0;
+  }
+
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*===== LAYOUT =====*/
+  .bd-grid{
+    max-width: 1024px;
+    display: grid;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  .l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--first-color);
+  }
+
+  .section {
+    padding: 6rem 0 6rem;
+  }
+
+  /*===== NAV =====*/
+  .navbar {
+    &__menu {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        padding: 25px 100px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__menu::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background: #fff;
+    }
+    &__logo {
+        position: relative;
+        display: flex;
+        font-size: 2em;
+    }
+    &__logo-text {
+        color: #000;
+        font-weight: 600;
+    }
+    &__item {
+        display: inline-block;
+        margin: 0 1.5rem 0;
+    }
+    &__link {
+        display: block;
+        font-size: 16px;
+        color: #000;
+    }
+  }
+
+  .home {
+    padding: 10rem 0 5rem;
+    &__data {
+        position: relative;
+        padding: 20px;
+        font-size: 18px;
+    }
+    &__data h1 {
+        font-size: 45px;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 640px;
+    }
+    &__button {
+        position: absolute;
+        display: block;
+        margin: 15px 0 0;
+        padding: 20px 35px;
+        font-size: 16px;
+        border-radius: .75rem;
+        color: #000;
+        background: rgb(97, 125, 255);
+    }
+  }
+
+.team {
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 20px;
+    }
+    &__profile-container {
+        width: 340px;
+        display: block;
+        text-align: center;
+        // background: #fff;
+        padding: 35px;
+        box-shadow: 0 1px 15px rgb(0, 0, 0, .2);
+        border-radius: .75rem;
+    }
+    &__img-container {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin: -85px 50% 25px;
+        border-radius: 5rem;
+        overflow: hidden; 
+        background: #fff;
+        box-shadow: 0 1px 5px rgb(0, 0, 0, .2);
+        transform: translateX(-50%);
+    }
+    &__pseudo {
+        font-size: 24px;
+        color: rgb(97, 125, 255);
+    }
+    &__posts-info {
+        display: flex;
+        justify-content: center;
+        margin: 0 45px 0;
+    }
+    &__posts-info p {
+        margin: 5px 8px 0;
+    }
+    &__social-container {
+        display: flex;
+        justify-content: center;
+        margin: 0 45px 0;
+    }
+    &__social-container  button {
+        display: flex;
+        border: none;
+        background: none;
+        font-size: 25px;
+        padding: 5px;
+        border-radius: 1rem;
+        margin: 15px 8px 0;
+        box-shadow: 0 1px 5px rgb(0, 0, 0, .2);
+
+    }
+} 
+
+.about {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    &__img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 340px;
+    }
+    &__data {
+        text-align: center;
+    }
+}
