@@ -267,15 +267,6 @@
 
 
   /* ===== ABOUT =====*/
-  h1{
-    text-align: center;
-    position: relative;
-  }
-
-  p{
-    text-align: center;
-  }
-
   .about{
     background-color: var(--first-color);
     overflow: hidden;
@@ -288,11 +279,21 @@
   }
 
   .about__img{
-    position: absolute;
-    top: 0;
-    left: 40rem;
+    position: relative;
+    padding-top: 1.5rem;
+    justify-self: center;
+    width: 302px;
+    height: 300px;
+  }
+  
+  h1{
+    text-align: center;
+    position: relative;
   }
 
+  p{
+    text-align: center;
+  }
   /* ===== ABOUT QUERIES =====
   @media screen and (min-width: 768px){
     body{
