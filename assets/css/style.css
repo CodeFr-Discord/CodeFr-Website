@@ -181,8 +181,8 @@ img {
 }
 .home__img {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 350px;
+  right: 300px;
   width: 640px;
 }
 .home__button {
